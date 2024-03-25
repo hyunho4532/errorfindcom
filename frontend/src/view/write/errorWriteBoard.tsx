@@ -1,14 +1,16 @@
 import './scss/errorWirteBoard.scss';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 function errorWriteBoard() {
+
+    const [errorType, setErrorType] = useState('');
 
     useEffect(() => {
 
         axios.post("http://localhost:50000/fetchData")
             .then(response => {
-                console.log(response.data);
+                setErrorType(response.data);
             })
             .catch(error => {
                 console.error(error);
