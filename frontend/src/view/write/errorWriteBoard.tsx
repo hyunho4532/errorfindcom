@@ -4,13 +4,14 @@ import axios from "axios";
 
 function errorWriteBoard() {
 
-    const [errorType, setErrorType] = useState('');
+    const [errorTypeData, setErrorTypeData] = useState([]);
 
     useEffect(() => {
-
         axios.post("http://localhost:50000/fetchData")
             .then(response => {
-                setErrorType(response.data);
+
+                setErrorTypeData(response.data);
+
             })
             .catch(error => {
                 console.error(error);
@@ -24,9 +25,7 @@ function errorWriteBoard() {
                 <h2 className="error-write-board-component-where-title">1. 에러가 어디에서 발생했나요? 🤔🤔</h2>
                 <div className="selectBox">
                     <select name="fruits" className="select">
-                        <option value="apple">웹</option>
-                        <option value="orange">모바일</option>
-                        <option value="grape">DevOps</option>
+                        { errorTypeData.map((value: any) => <option>{value}</option>) }
                     </select>
                     <span className="icoArrow"></span>
                 </div>
