@@ -6,9 +6,9 @@ function errorWriteBoard() {
 
     useEffect(() => {
 
-        axios.post("/stage/error/write")
+        axios.post("http://localhost:50000/fetchData")
             .then(response => {
-                console.log(response);
+                console.log(response.data);
             })
             .catch(error => {
                 console.error(error);
