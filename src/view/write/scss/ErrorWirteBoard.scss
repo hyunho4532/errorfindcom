@@ -1,0 +1,56 @@
+@import "../../../component/select/SelectBox";
+
+.error-write-board-component-first-group {
+
+  .error-write-board-component-where-title {
+    text-align: left;
+  }
+
+  @include select-box;
+}
+
+.error-write-board-component-second-group {
+  margin-top: 80px;
+
+  .error-write-board-component-kind {
+    text-align: left;
+  }
+
+  @include select-box;
+}
+
+.error-write-board-component-third-group {
+  margin-top: 80px;
+
+  .error-write-board-component-kind {
+    text-align: left;
+  }
+
+  @include select-box;
+}
+
+.error-write-board-component-four-group {
+  margin-top: 80px;
+
+  .error-write-board-component-kind {
+    text-align: left;
+  }
+
+  @include select-box;
+}
+
+.error-write-board-component-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+
+  .component-button {
+    width: 1000px;
+    height: 52px;
+    background-color: #747bff;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
