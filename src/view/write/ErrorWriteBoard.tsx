@@ -6,7 +6,7 @@ import ThirdGroup from "./group/ThirdGroup.tsx";
 import SecondGroup from "./group/SecondGroup.tsx";
 import FirstGroup from "./group/FirstGroup.tsx";
 
-function errorWriteBoard() {
+function ErrorWriteBoard() {
 
     return (
         <>
@@ -45,4 +45,4 @@ function errorWriteBoard() {
     )
 }
 
-export default errorWriteBoard;
+export default ErrorWriteBoard;
